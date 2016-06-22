@@ -63,7 +63,7 @@ module.exports = function SwaggerFactory(options){
         if(!calculated) {
             return calculateSwagger(sails, responder);
         }
-        responder(responder);
+        responder(swaggerData);
     }
 
 

@@ -1,0 +1,96 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Sails Swagger",
+    "version": "1.0.0"
+  },
+  "tags": [],
+  "definitions": {
+    "contact": {
+      "properties": {}
+    },
+    "group": {
+      "properties": {}
+    }
+  },
+  "paths": {
+    "/groups/{id}": {
+      "GET": {
+        "summary": " Get Groups ",
+        "description": "Get Groups Description",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "Groups"
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Groups",
+            "schema": "Group",
+            "type": "array"
+          }
+        },
+        "parameters": []
+      },
+      "POST": {
+        "summary": " Get Groups ",
+        "description": "Get Groups Description",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "Groups"
+        ],
+        "responses": {
+          "200": {
+            "description": "List of Groups",
+            "schema": "Group",
+            "type": "array"
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/groups/team": {
+      "PUT": {
+        "summary": "Update Groups ",
+        "description": "Update Groups Description",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "Groups"
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated Group",
+            "schema": "Group"
+          }
+        },
+        "parameters": [
+          "Group"
+        ]
+      },
+      "POST": {
+        "summary": "Update Groups ",
+        "description": "Update Groups Description",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "Groups"
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated Group",
+            "schema": "Group"
+          }
+        },
+        "parameters": [
+          "Group"
+        ]
+      }
+    }
+  }
+}

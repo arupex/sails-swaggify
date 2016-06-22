@@ -65,6 +65,8 @@ describe('sails-swaggify', function(){
         }
     };
 
+    var expectedData = require('./testData.json');
+
     var swaggy = require('../index');
 
     var assert = require('assert-diff').deepEqual;
@@ -75,106 +77,11 @@ describe('sails-swaggify', function(){
 
         swaggerFactory(sailsAndRoutes, function(result){
             //console.log('', JSON.stringify(result, null, 3));
-            assert(result,
-                {
-                    "swagger": "2.0",
-                    "info": {
-                        "title": "Sails Swagger",
-                        "version": "1.0.0"
-                    },
-                    "tags": [],
-                    "definitions": {
-                        "contact": {
-                            "properties": {}
-                        },
-                        "group": {
-                            "properties": {}
-                        }
-                    },
-                    "paths": {
-                        "/groups/{id}": {
-                            "GET": {
-                                "summary": " Get Groups ",
-                                "description": "Get Groups Description",
-                                "produces": [
-                                    "application/json"
-                                ],
-                                "tags": [
-                                    "Groups"
-                                ],
-                                "responses": {
-                                    "200": {
-                                        "description": "List of Groups",
-                                        "schema": "Group",
-                                        "type": "array"
-                                    }
-                                },
-                                "parameters": []
-                            },
-                            "POST": {
-                                "summary": " Get Groups ",
-                                "description": "Get Groups Description",
-                                "produces": [
-                                    "application/json"
-                                ],
-                                "tags": [
-                                    "Groups"
-                                ],
-                                "responses": {
-                                    "200": {
-                                        "description": "List of Groups",
-                                        "schema": "Group",
-                                        "type": "array"
-                                    }
-                                },
-                                "parameters": []
-                            }
-                        },
-                        "/groups/team": {
-                            "PUT": {
-                                "summary": "Update Groups ",
-                                "description": "Update Groups Description",
-                                "produces": [
-                                    "application/json"
-                                ],
-                                "tags": [
-                                    "Groups"
-                                ],
-                                "responses": {
-                                    "200": {
-                                        "description": "Updated Group",
-                                        "schema": "Group"
-                                    }
-                                },
-                                "parameters": [
-                                    "Group"
-                                ]
-                            },
-                            "POST": {
-                                "summary": "Update Groups ",
-                                "description": "Update Groups Description",
-                                "produces": [
-                                    "application/json"
-                                ],
-                                "tags": [
-                                    "Groups"
-                                ],
-                                "responses": {
-                                    "200": {
-                                        "description": "Updated Group",
-                                        "schema": "Group"
-                                    }
-                                },
-                                "parameters": [
-                                    "Group"
-                                ]
-                            }
-                        }
-                    }
-                }
-
-            );
-            done();
+            assert(result, expectedData);
+            swaggerFactory(sailsAndRoutes, function(secondResult){
+                assert(secondResult, expectedData);
+                done();
+            });
         });
 
     });
