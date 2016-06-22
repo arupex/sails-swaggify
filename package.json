@@ -1,6 +1,6 @@
 {
   "name": "sails-swaggify",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "creates swagger doc json for your sails routes",
   "main": "index.js",
   "directories": {
