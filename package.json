@@ -1,0 +1,33 @@
+{
+  "name": "sails-swaggify",
+  "version": "1.0.0",
+  "description": "creates swagger doc json for your sails routes",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arupex/sails-swaggify.git"
+  },
+  "keywords": [
+    "sails",
+    "swagger",
+    "swaggify",
+    "api",
+    "documentation"
+  ],
+  "author": "dirwin517",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/arupex/sails-swaggify/issues"
+  },
+  "homepage": "https://github.com/arupex/sails-swaggify#readme",
+  "devDependencies": {
+    "assert-diff": "^1.0.1",
+    "mocha": "^2.5.3"
+  }
+}
